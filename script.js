@@ -47,4 +47,4 @@ function renderGallery() {
 }
 
 // 4. Run the function automatically when the website loads
-renderGallery();
+renderGallery(); 
