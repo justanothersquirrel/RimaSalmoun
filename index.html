@@ -11,15 +11,90 @@
     <aside>
       <h1>Rima Salmoun</h1>
 
-<nav>
-  <ul>
-    <li><a href="#" onclick="showRecentWorks(); setActiveLink(this); return false;">Recent Works</a></li>
-    <li><a href="#" onclick="showPaintings(); setActiveLink(this); return false;">Paintings</a></li>
-    <li><a href="#" onclick="showPublications(); setActiveLink(this); return false;">Publications</a></li>
-    <li><a href="#" onclick="showAboutText(); setActiveLink(this); return false;">About</a></li>
-    <li><a href="#" onclick="showContact(); setActiveLink(this); return false;">Contact</a></li>
-  </ul>
-</nav>
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="#"
+              onclick="
+                showRecentWorks();
+                setActiveLink(this);
+                return false;
+              "
+              >Recent Works</a
+            >
+          </li>
+          <li class="has-submenu">
+            <a
+              href="#"
+              onclick="
+                toggleSubmenu(event, this);
+                showPaintings();
+                setActiveLink(this);
+                return false;
+              "
+              >Paintings</a
+            >
+            <ul class="submenu" id="years-submenu">
+              <li>
+                <a
+                  href="#"
+                  onclick="
+                    showPaintingsByYear('2005');
+                    setActiveLink(this);
+                    return false;
+                  "
+                  >2005</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="
+                    showPaintingsByYear('2006');
+                    setActiveLink(this);
+                    return false;
+                  "
+                  >2006</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="#"
+              onclick="
+                showPublications();
+                setActiveLink(this);
+                return false;
+              "
+              >Publications</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              onclick="
+                showAboutText();
+                setActiveLink(this);
+                return false;
+              "
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              onclick="
+                showContact();
+                setActiveLink(this);
+                return false;
+              "
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
     </aside>
 
     <main>
@@ -42,7 +117,5 @@
       <div class="gallery-grid" id="gallery"></div>
     </main>
     <script src="script.js"></script>
-    <script src="scribble.js"></script>
-
   </body>
 </html>

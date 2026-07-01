@@ -91,3 +91,27 @@ nav a.active {
 aside h1 {
   color: #583218;
 }
+
+/* Submenu baseline styling */
+.submenu {
+  list-style: none;
+  padding-left: 15px; /* Indent the years slightly */
+  margin-top: 5px;
+  max-height: 0; /* Collapsed by default */
+  overflow: hidden;
+  transition: max-height 0.3s ease-out; /* Smooth slide open animation */
+}
+
+/* Class to open the submenu via JS */
+.submenu.open {
+  max-height: 200px; /* Adjust if you add many more years later */
+}
+
+.submenu li {
+  margin-bottom: 5px;
+}
+
+.submenu a {
+  font-size: 0.95rem; /* Slightly smaller font for the sub-items */
+  opacity: 0.8;
+}
